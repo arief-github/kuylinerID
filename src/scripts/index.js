@@ -1,4 +1,10 @@
 import '../styles/style.css';
-const heading = document.querySelector('h1');
+import '../styles/responsive.css';
+import './components/navbar';
+import App from './views/App';
 
-document.addEventListener('DOMContentLoaded', heading);
+const app = new App({
+	button: document.querySelector('.menu'),
+	drawer: document.querySelector('.nav-list'),
+	content: document.querySelector('#main-content'),
+})
