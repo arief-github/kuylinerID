@@ -2,6 +2,7 @@ import '../styles/style.css';
 import '../styles/responsive.css';
 import './components/navbar';
 import './components/hero-image';
+import './components/footer-app';
 import App from './views/App';
 
 const app = new App({
