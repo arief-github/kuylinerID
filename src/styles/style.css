@@ -44,6 +44,23 @@ body {
     color: var(--font-color);
 }
 
+.btn {
+    font-family: 'Comfortaa', cursive;
+    margin: 1.3em;
+    padding: 0.375em 0.75em;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    background-color: var(--btn);
+    border: 1px solid transparent;
+    margin: 1.3em 0;
+    font-size: large;
+    border-radius: 0.276em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 /* Navigation Bar */
 nav {
     position: relative;
