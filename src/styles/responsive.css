@@ -52,3 +52,11 @@
     	display: flex;
     }
 }
+
+/* untuk layar 992px kebawah */
+@media screen and (max-width: 992px) {
+    .hero {
+        background: var(--image-color), url(/images/hero.jpg);
+        background-position: center;
+    }
+}
