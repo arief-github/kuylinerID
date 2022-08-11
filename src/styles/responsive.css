@@ -60,3 +60,19 @@
         background-position: center;
     }
 }
+
+/* untuk layar smartphone. min-width selalu memulai dari minimal */
+@media screen and (min-width: 600px) {
+    #list-rest {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.545em;
+    }
+
+    .box-ganjil {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}

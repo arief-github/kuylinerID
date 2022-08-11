@@ -10,3 +10,7 @@ const app = new App({
 	drawer: document.querySelector('.nav-list'),
 	content: document.querySelector('#main-content'),
 })
+
+window.addEventListener('DOMContentLoaded', () => {
+  app.renderPage();
+});
