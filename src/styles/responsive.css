@@ -1,3 +1,24 @@
+/* responsive grid */
+.grid-2 {
+    display: grid;
+    grid-gap: 1em;
+}
+
+.grid-3 {
+    display: grid;
+    grid-gap: 1em;
+}
+
+@media screen and (max-width: 320px) {
+    nav {
+        padding: 1.5em 0.1em;
+    }
+
+    .nav-item a {
+        font-size: 1.2em;
+    }
+}
+
 /* untuk layar 600px kebawah */
 @media screen and (max-width: 600px) {
     .menu {
@@ -41,28 +62,22 @@
     }
 
     .nav-item a {
-    	padding: 1.3em;
+        padding: 1.3em;
     }
 
     .nav-item button {
-    	padding: 1.8em;
+        padding: 1.8em;
     }
 
     .nav-list-block {
-    	display: flex;
+        display: flex;
     }
 }
 
-/* untuk layar 992px kebawah */
-@media screen and (max-width: 992px) {
-    .hero {
-        background: var(--image-color), url(/images/hero.jpg);
-        background-position: center;
-    }
-}
+
 
 /* untuk layar smartphone. min-width selalu memulai dari minimal */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 599px) {
     #list-rest {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -74,5 +89,47 @@
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 3;
+    }
+}
+
+
+/* untuk ukuran layar medium */
+@media screen and (min-width: 768px) {
+    .title-review {
+        grid-row-start: 4;
+    }
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.245em;
+    }
+
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat (3, 1fr);
+        grid-gap: 1.245em;
+    }
+}
+
+
+/* untuk layar 992px kebawah */
+@media screen and (max-width: 992px) {
+    .hero {
+        background: var(--image-color), url(/images/hero.jpg);
+        background-position: center;
+    }
+}
+
+
+/* extra large devices : 1200px */
+@media screen and (min-width: 1400px) {
+    main {
+        max-width: 1400px;
+    }
+
+    #list-rest {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
