@@ -11,6 +11,12 @@ const app = new App({
 	content: document.querySelector('#main-content'),
 })
 
+// render page berdasarkan route url/ konsep SPA
+window.addEventListener('hashchange', () => {
+	app.renderPage();
+});
+
+// render assets per page
 window.addEventListener('DOMContentLoaded', () => {
   app.renderPage();
 });
