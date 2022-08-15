@@ -3,6 +3,7 @@ import RestaurantSource from '../../data/restaurant-source';
 import { restaurantDetailTemplate } from '../template/template-html';
 import LikeButtonPresenter from '../../utils/like-button-presenter';
 import FavRestaurantIdb from '../../data/restaurant-idb';
+import PostReview from '../../utils/post-review';
 
 const Detail = {
     async render() {
@@ -29,7 +30,6 @@ const Detail = {
             </div>
         `;
     },
-
     async afterRender() {
         const url = UrlParser.parseActiveUrlWithoutCombiner();
         const detailContainer = document.querySelector("#detail-rest");
@@ -52,6 +52,24 @@ const Detail = {
             detailContainer.innerHTML = `Error: ${error}, swipe up to refresh!`;
             main.style.display = 'block';
         }
+
+        const btnSubmit = document.querySelector('#submit-review');
+        const nameInput = document.querySelector('#inputName');
+        const reviewInput = document.querySelector('#inputReview');
+
+        btnSubmit.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            if (nameInput.value === '' || reviewInput.value === '') {
+                alert('Inputan tidak boleh ada yang kosong');
+                nameInput.value = '';
+                reviewInput.value = '';
+            } else {
+                PostReview(url, nameInput.value, reviewInput.value);
+                nameInput.value = '';
+                reviewInput.value = '';
+            }
+        })
     }
 }
 
