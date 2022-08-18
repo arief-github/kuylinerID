@@ -5,6 +5,8 @@ import './components/hero-image';
 import './components/footer-app';
 import App from './views/App';
 import swRegister from './utils/sw-register';
+import WebSocketInitiator from './utils/websocket-initiator';
+
 
 const app = new App({
 	button: document.querySelector('.menu'),
