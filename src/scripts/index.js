@@ -12,6 +12,8 @@ const app = new App({
 	button: document.querySelector('.menu'),
 	drawer: document.querySelector('.nav-list'),
 	content: document.querySelector('#main-content'),
+	toggle: document.querySelector('#dark-mode'),
+	currentTheme: localStorage.getItem('theme'),
 })
 
 // render page berdasarkan route url/ konsep SPA
